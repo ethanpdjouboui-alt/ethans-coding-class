@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Using Functions</title>
+</head>
+<body>
+
+  <h1>Multiplication Using Functions</h1>
+
+  <p id="result1"></p>
+  <p id="result2"></p>
+
+  <script>
+    function multiply(a, b) {
+      return a * b;
+    }
+
+   
+    document.getElementById("result1").textContent = "5 x 4 = " + multiply(5, 4);
+
+    
+    document.getElementById("result2").textContent = "5 x undefined = " + multiply(5);
+  </script>
+
+</body>
+</html>

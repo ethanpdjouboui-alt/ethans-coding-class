@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Daily Task Organizer</title>
+</head>
+<body>
+
+  <h1>My Daily Task Organizer</h1>
+
+  <h2>Task names</h2>
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+
+  
+
+  <script>
+    var tasks = ["Study JavaScript", "Do laundry", "Cook dinner", "Go for a walk", "Call mom"];
+    var times = [90, 45, 60, 30, 15];
+
+    document.getElementById("p1").textContent = "Original: " + tasks;
+
+    tasks.sort();
+    document.getElementById("p2").textContent = "A to Z: " + tasks;
+
+    tasks.reverse();
+    document.getElementById("p3").textContent = "Z to A: " + tasks;
+
+    
+    
+  </script>
+
+</body>
+</html>

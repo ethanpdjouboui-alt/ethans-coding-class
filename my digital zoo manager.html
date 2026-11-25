@@ -1,0 +1,63 @@
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Digital Zoo</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        h1 {
+            color:skyblue; 
+              
+            
+        }
+
+        #zoo {
+            background-color: skyblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        button {
+            background-color: skyblue;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Digital Zoo Manager</h1>
+
+    <div id="zoo">
+        <h2>Animal </h2>
+        <p>Lion</p>
+        <p>Gorilla</p>
+        <p>Monkey</p>
+        <p>Zebra</p>
+    </div>
+
+    <button onclick="showInfo()">Show DOM Info</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showInfo() {
+            let zoo = document.getElementById("zoo");
+
+            document.getElementById("result").innerHTML =
+                "Number of animals: " + (zoo.children.length - 1);
+
+            zoo.style.backgroundColor = "blue";
+        }
+    </script>
+
+</body>
+</html>

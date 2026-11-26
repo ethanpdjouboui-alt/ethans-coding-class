@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Countdown</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        div {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Birthday Countdown Checker</h1>
+
+    <div>
+        <p id="part1"></p>
+        <p id="part2"></p>
+        <p id="part3"></p>
+        <p id="part4"></p>
+    </div>
+
+    <script>
+
+
+        let partyName = null;
+        let partyPlace = undefined;
+
+        document.getElementById("part1").innerHTML =
+            "Party name: " + partyName + "<br>" +
+            "Party place: " + partyPlace;
+
+
+        let date = new Date();
+        let hour = date.getHours();
+
+        let greeting;
+
+        if (hour < 12) {
+            greeting = "Good morning!";
+        }
+        else if (hour < 18) {
+            greeting = "Good afternoon!";
+        }
+        else {
+            greeting = "Good evening!";
+        }
+
+        document.getElementById("part2").innerHTML = greeting;
+
+
+
+        let daysLeft = 6;
+        let message;
+
+        if (daysLeft == 0) {
+            message = "Party today!";
+        }
+        else if (daysLeft == 1) {
+            message = "Only 1 day left!";
+        }
+        else {
+            message = daysLeft + " days left!";
+        }
+
+        document.getElementById("part3").innerHTML = message;
+
+
+
+        let count = daysLeft;
+        let result = "";
+
+        while (count > 0) {
+            result += count + "<br>";
+            count--;
+        }
+
+        result += "Party time!";
+
+        document.getElementById("part4").innerHTML = result;
+
+    </script>
+
+</body>
+</html>
